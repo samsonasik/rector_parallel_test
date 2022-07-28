@@ -12,6 +12,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: Install PHP
-        run: php composer.phar install
+        run: php composer.phar update
       - name: Rector
         run: vendor/bin/rector process src
