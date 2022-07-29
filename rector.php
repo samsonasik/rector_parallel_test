@@ -14,5 +14,7 @@ return function (RectorConfig $rectorConfig): void {
         SensiolabsSetList::FRAMEWORK_EXTRA_61,
     ]);
 
+    $rectorConfig->paths([__DIR__ . '/src']);
+
     $rectorConfig->parallel(240, 2);
 };
