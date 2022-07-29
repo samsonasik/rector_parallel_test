@@ -16,5 +16,5 @@ return function (RectorConfig $rectorConfig): void {
 
     $rectorConfig->paths([__DIR__ . '/src']);
 
-    $rectorConfig->parallel(240, 2);
+    $rectorConfig->parallel(240, 2, 2);
 };
