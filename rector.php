@@ -14,5 +14,5 @@ return function (RectorConfig $rectorConfig): void {
         SensiolabsSetList::FRAMEWORK_EXTRA_61,
     ]);
 
-    $rectorConfig->parallel(240);
+    $rectorConfig->parallel(240, 2);
 };
