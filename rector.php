@@ -10,7 +10,7 @@ return function (RectorConfig $rectorConfig): void {
     $rectorConfig->sets([
         DoctrineSetList::ANNOTATIONS_TO_ATTRIBUTES,
         SymfonySetList::ANNOTATIONS_TO_ATTRIBUTES,
-        NetteSetList::ANNOTATIONS_TO_ATTRIBUTES,
+  //      NetteSetList::ANNOTATIONS_TO_ATTRIBUTES,
         SensiolabsSetList::FRAMEWORK_EXTRA_61,
     ]);
 
