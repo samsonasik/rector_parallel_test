@@ -10,7 +10,12 @@ return function (RectorConfig $rectorConfig): void {
     $rectorConfig->sets([
         DoctrineSetList::ANNOTATIONS_TO_ATTRIBUTES,
         SymfonySetList::ANNOTATIONS_TO_ATTRIBUTES,
-        NetteSetList::ANNOTATIONS_TO_ATTRIBUTES,
+  //      NetteSetList::ANNOTATIONS_TO_ATTRIBUTES,
         SensiolabsSetList::FRAMEWORK_EXTRA_61,
     ]);
+
+    $rectorConfig->paths([__DIR__ . '/src']);
+
+    //$rectorConfig->parallel(240, 2, 2);
+    // $rectorConfig->disableParallel();
 };

@@ -1,5 +1,5 @@
 name: GitHub Actions Rector Test
-on: [push]
+on: [push, pull_request]
 jobs:
   Explore-GitHub-Actions:
     runs-on: windows-latest
@@ -12,6 +12,20 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: Install PHP
-        run: php composer.phar install
+        run: php composer.phar update
       - name: Rector
-        run: vendor/bin/rector process src
+        run: |
+          vendor/bin/rector process src/Command
+          vendor/bin/rector process src/Controller
+          vendor/bin/rector process src/DataFixture
+          vendor/bin/rector process src/dataType
+          vendor/bin/rector process src/Entity
+          vendor/bin/rector process src/Form
+          vendor/bin/rector process src/Helper
+          vendor/bin/rector process src/Message
+          vendor/bin/rector process src/MessageHandler
+          vendor/bin/rector process src/Repository
+          vendor/bin/rector process src/Security
+          vendor/bin/rector process src/Service
+          vendor/bin/rector process src/Twig
+          vendor/bin/rector process src/Kernel.php src/UtilsHelper.php
